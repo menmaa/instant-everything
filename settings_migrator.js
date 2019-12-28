@@ -1,9 +1,10 @@
 const DefaultSettings = {
     "enchant": true,
     "upgrade": true,
+	"repair": true,
     "soulbind": true,
     "merge": true,
-    "dismantle": true,
+    "dismantle": true
 }
 
 module.exports = function MigrateSettings(from_ver, to_ver, settings) {

@@ -1,7 +1,7 @@
 const SettingsUI = require('tera-mod-ui').Settings;
 
 module.exports = function InstantEverything(mod) {
-    const PURPOSES = ['enchant', 'upgrade', 'soulbind', 'merge', 'dismantle'];
+    const PURPOSES = ['enchant', 'upgrade', 'repair', 'soulbind', 'merge', 'dismantle'];
 
     let hooks = {};
     function hook(purpose, ...args) {
@@ -13,6 +13,7 @@ module.exports = function InstantEverything(mod) {
 
     let enchanting = null;
     let upgrading = null;
+	let repairing = null;
     function enable(purpose) {
         switch (purpose) {
             case 'enchant': {
@@ -48,6 +49,22 @@ module.exports = function InstantEverything(mod) {
                 }
                 break;
             }
+			
+			case 'repair': {
+				if(mod.majorPatchVersion >= 79) {
+					hook('repair', 'C_REGISTER_REPAIR_ITEM', 1, event => { repairing = event });
+
+					hook('repair', 'C_START_REPAIR_ITEM', 1, event => {
+						if (repairing && event.contract === repairing.contract) {
+							mod.send('C_REQUEST_REPAIR_ITEM', 1, repairing);
+							return false;
+						}
+					});
+
+					hook('repair', 'C_REQUEST_REPAIR_ITEM', 'event', () => false);
+				}
+				break;
+			}
 
             case 'soulbind': {
                 hook('soulbind', 'C_BIND_ITEM_BEGIN_PROGRESS', 1, event => {

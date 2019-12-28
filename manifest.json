@@ -1,9 +1,9 @@
 {
     "files": {
-        "index.js": "7dd1ebd434d6557995aa3a2cbfe970012dd934320065dd3f4af2efba59b0c1b4",
-        "settings_migrator.js": "823fc1c204003a4a782e23b1a0781b9ee48d2865004a8acb73359777c0c067bc",
-        "settings_structure.js": "76520793fad024750498529f19c830819b5d9e3b0ab6aa408caaf32c0c7b2000",
-        "module.json": "874965336c161ab99edd2196c34fd3b5a03f63724a390a9f34712e0df487fbcb"
+        "index.js": "f023f90e5989ddf45649532a508d635e2422e2d34e15ef9f5140e881f0369c69",
+        "settings_migrator.js": "ab71e0d62574ff4fc40a0cbe88d8a21a3594ba62339115bc89e535b1178040ca",
+        "settings_structure.js": "082634c1addedd42e101ef9fb01ec1c63d85470311060ca3ca0add2ab8894ecb",
+        "module.json": "9fc453bcbcd449f7d9fffcea3e3f6f7ee152e3034e97cd2d500bfb6c433210ee"
     },
     "defs": {
         "C_REGISTER_ENCHANT_ITEM": 1,
@@ -13,6 +13,10 @@
         "C_REGISTER_EVOLUTION_ITEM": 1,
         "C_REQUEST_EVOLUTION": ["raw", 1],
         "C_START_EVOLUTION": 1,
+		
+		"C_REGISTER_REPAIR_ITEM": 1,
+		"C_REQUEST_REPAIR_ITEM": ["raw", 1],
+		"C_START_REPAIR_ITEM": 1,
 
         "C_BIND_ITEM_BEGIN_PROGRESS": 1,
         "C_BIND_ITEM_EXECUTE": ["raw", 1],

@@ -9,6 +9,11 @@ module.exports = [
         "name": "Instant Upgrading",
         "type": "bool"
     },
+	{
+		"key": "repair",
+		"name": "Instant Repairing",
+		"type": "bool"
+	},
     {
         "key": "soulbind",
         "name": "Instant Soulbinding",
