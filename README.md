@@ -7,10 +7,10 @@ Each mode can be toggled by using the in-game command `instant [mode]`, with `[m
 
 1. Download and extract into the `mods` folder of your TERA Toolbox.
 2. Copy files from `defs` folder into `[toolbox folder]\node_modules\tera-data\protocol`
-3. (TERA EU ONLY) Add the following lines to the `[toolbox folder]\node_modules\tera-data\map\protocol.359960.map`:
+3. (TERA EU ONLY) Add the following lines to the `[toolbox folder]\node_modules\tera-data\map\protocol.363037.map`:
 
 ```
-C_REGISTER_REPAIR_ITEM 59644
-C_REQUEST_REPAIR_ITEM 36554
-C_START_REPAIR_ITEM 43446
+C_REGISTER_REPAIR_ITEM 51721
+C_REQUEST_REPAIR_ITEM 38266
+C_START_REPAIR_ITEM 46352
 ```
