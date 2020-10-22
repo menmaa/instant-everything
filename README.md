@@ -1,3 +1,5 @@
+## This mod no longer works due to packet integrity implementation and limitations of TERA Toolbox. Unless you're being next level ethical I guess ;)
+
 # instant-everything
 Removes the annoying animation and skips the progress bar for enchanting, upgrading, repairing, soulbinding, dismantling, and merging items.
 
